@@ -9,12 +9,9 @@
 #    puts "Unable to open file!"
 # end
 
-# aFile = File.new("hello.txt", "w")
-# if aFile
-#    aFile.syswrite("ABCDEF")
-# else
-#    puts "Unable to open file!"
-# end
-aFile = File.new("hello.txt", "r+")
-puts "enter the text"
-a = gets.chomp.to_s
+aFile = File.new("hello.txt", "a")
+if aFile
+   aFile.syswrite("ABCDEF")
+else
+   puts "Unable to open file!"
+end
